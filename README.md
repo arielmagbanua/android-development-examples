@@ -1,6 +1,6 @@
 # android-mobile-app-dev-examples
 
-## Git Guidelines and Commands
+## Basic Git Guides and Commands
 
 * Repository initialization and configuration.
 	```bash
@@ -60,4 +60,12 @@
 	# if there are conflicts then resolve them manually.
 	# commit and push the changes to a branch
 	git push origin master
+	```
+
+
+## Branching and Collaboration Guides
+
+* Creating a branch
+	```bash
+	git checkout -b branch_name
 	```
