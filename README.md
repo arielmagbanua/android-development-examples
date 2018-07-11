@@ -1,6 +1,6 @@
 # android-mobile-app-dev-examples
 
-## Basic Git Guides and Commands
+## Basic Git Guides
 
 * Repository initialization and configuration.
 	```bash
@@ -63,7 +63,7 @@
 	```
 
 
-## Branching and Collaboration Guides
+## Git Branching Guides
 
 * Creating a branch.
 	```bash
@@ -82,3 +82,7 @@
 	# after merging if there are merge conflicts manually resolved them.
 	# commit the branch.
 	```
+
+
+## Git Collaboration Guides
+
