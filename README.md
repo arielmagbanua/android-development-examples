@@ -29,7 +29,7 @@
 	```
 
 * Adding untracked files or delete files.
-	```
+	```bash
 	# add a file to track
 	git add file_name
 
@@ -38,18 +38,21 @@
 	```
 
 * Commiting and pushing changes and added files.
-	```
+	```bash
 	# commit
 	git commit -am "My commit message"
+
 	# push to a branch
 	git push origin master
 	```
 
 * Pulling and merging changes from a branch.
-	```
+	```bash
 	# pull any updates from a branch
 	git pull origin master
-	# all changes will be merged and will notify for merge conflicts. IF there are conflicts then resolve them manually.
+
+	# all changes will be merged and will notify for merge conflicts. 
+	# if there are conflicts then resolve them manually.
 	# commit and push the changes to a branch
 	git push origin master
 	```
