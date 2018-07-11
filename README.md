@@ -28,6 +28,11 @@
 	git config user.name "Juan Dela Cruz"
 	```
 
+* Check status of all files in the repository
+	```bash
+	git status
+	```
+
 * Adding untracked files or delete files.
 	```bash
 	# add a file to track
