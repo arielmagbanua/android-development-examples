@@ -3,12 +3,12 @@
 ## Git Guidelines and Commands
 
 * Repository initialization and configuration
-	```
-	// initialize the repo
+	```Shell
+	# initialize the repo
 	git init
-	// add the remote origin of the repo
+	# add the remote origin of the repo
 	git remote add origin https://github.com/user/repo.git
-	// verify remote origin
+	# verify remote origin
 	origin  https://github.com/user/repo.git (fetch)
 	origin  https://github.com/user/repo.git (push)
 	```
