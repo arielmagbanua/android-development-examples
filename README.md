@@ -86,3 +86,9 @@
 
 ## Git Collaboration Guides
 
+* By default your public repository can be cloned by anyone but only added collaborators can commit to any branch.
+
+* In Github you can add collaborators to be able to contribute and commit to repositories.
+
+* Outsiders can fork and make pull request to the owner of the repository in order to integrate their changes.
+
