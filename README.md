@@ -92,3 +92,5 @@
 
 * Outsiders can fork and make pull request to the owner of the repository in order to integrate their changes.
 
+* GitHub Flow - https://guides.github.com/introduction/flow/
+
