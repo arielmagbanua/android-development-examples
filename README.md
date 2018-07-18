@@ -16,13 +16,6 @@
 	origin  https://github.com/user/repo.git (push)
 	```
 
-* Cloning a repository.
-	```bash
-	git clone https://github.com/user/repo.git
-	# example
-	git clone https://github.com/arielmagbanua/android-mobile-app-dev-examples.git
-	```
-
 * Set-up email and user name.
 	```bash
 	git config user.email "juan_dela_cruz@example.com"
@@ -63,6 +56,13 @@
 	git push origin master
 	```
 
+* Cloning a repository.
+	```bash
+	git clone https://github.com/user/repo.git
+	# example
+	git clone https://github.com/arielmagbanua/android-mobile-app-dev-examples.git
+	```
+
 
 ## Git Branching Guides
 
@@ -94,4 +94,3 @@
 * Outsiders can fork and make pull request to the owner of the repository in order to integrate their changes.
 
 * GitHub Flow - https://guides.github.com/introduction/flow/
-
