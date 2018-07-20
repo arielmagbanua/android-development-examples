@@ -49,7 +49,10 @@
 	```bash
 	# pull any updates from a branch.
 	git pull origin master
-
+	
+	# In the case of unrelated histories add --allow-unrelated-histories
+	git pull origin master --allow-unrelated-histories
+	
 	# all changes will be merged and will notify for merge conflicts. 
 	# if there are conflicts then resolve them manually.
 	# commit and push the changes to a branch.
@@ -80,6 +83,10 @@
 	```bash
 	# merge changes from example_branch_name_1
 	git merge example_branch_name_1
+	
+	# in case of unrelated histories add --allow-unrelated-histories
+	git merge example_branch_name_1 --allow-unrelated-histories
+	
 	# after merging if there are merge conflicts manually resolved them.
 	# commit the branch.
 	```
