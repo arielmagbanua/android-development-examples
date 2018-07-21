@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 public class MyActivity extends AppCompatActivity {
 
+    // TODO: declare all the variables
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
