@@ -6,7 +6,7 @@ import android.os.Bundle;
 public class MyActivity extends AppCompatActivity {
 
     // TODO: declare all the variables
-
+	String name = 'Yeltsin';
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
