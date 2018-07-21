@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/edit_message_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message"
+            android:layout_weight="8"/>
+
+        <Button
+            android:id="@+id/send_button_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/edit_message_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message"
+            android:layout_weight="8"/>
+
+        <Button
+            android:id="@+id/send_button_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send"
+            android:layout_weight="2"/>
+    </LinearLayout>
+</LinearLayout>
