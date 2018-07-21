@@ -6,8 +6,9 @@ import android.os.Bundle;
 public class MyActivity extends AppCompatActivity {
 
     // TODO: declare all the variables
-    String name = "ariel";
-
+    String name2 = "ariel";
+	String name1 = 'Yeltsin';
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
