@@ -7,8 +7,8 @@ public class MyActivity extends AppCompatActivity {
 
     // TODO: declare all the variables
     String name2 = "ariel";
-	String name1 = 'Yeltsin';
-	
+	String name1 = "Yeltsin";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

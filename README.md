@@ -102,4 +102,3 @@
 
 * GitHub Flow - https://guides.github.com/introduction/flow/
 
-*hello
