@@ -5,11 +5,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    public static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         showDialogButton.setOnClickListener(this);
         showLayoutsDemoButton.setOnClickListener(this);
         Toast.makeText(this, "Application Thinker!!!", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_send:
+                Log.d(TAG, "menu_send is clicked!");
+                return true;
+            case R.id.menu_settings:
+                Log.d(TAG, "menu_settings is clicked!");
+                return true;
+        }
+
+        return false;
     }
 
     public void showToast(View view){

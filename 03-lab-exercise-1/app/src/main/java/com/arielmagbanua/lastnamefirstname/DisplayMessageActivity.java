@@ -14,10 +14,11 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
+        int numberExtra = intent.getIntExtra(MyActivity.NUMBER_EXTRA, 0);
 
         TextView textView = new TextView(this);
         textView.setTextSize(40);
-        textView.setText(message);
+        textView.setText(message + " " +numberExtra);
 
         setContentView(textView);
     }
