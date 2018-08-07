@@ -1,8 +1,14 @@
 package com.arielmagbanua.userinterface;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,6 +22,10 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final String TAG = "MainActivity";
+    public static final String MAIN_NOTIFICATION_CHANNEL_ID = "MainActivity.channelID";
+    public static final int MAIN_NOTIFICATION_ID = 1;
+    public static final String MAIN_NOTIFICATION_CHANNEL_NAME = "MainActivity_notification";
+    public static final String MAIN_NOTIFICATION_DESCRIPTION = "MainActivity notification channel.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +42,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         showNotificationButton.setOnClickListener(this);
         showDialogButton.setOnClickListener(this);
         showLayoutsDemoButton.setOnClickListener(this);
-        Toast.makeText(this, "Application Thinker!!!", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_activity_menu, menu);
+        inflater.inflate(R.menu.my_menu, menu);
         return true;
     }
 
@@ -50,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return true;
             case R.id.menu_settings:
                 Log.d(TAG, "menu_settings is clicked!");
+                return true;
+            case R.id.menu_delete:
+                Log.d(TAG, "menu_delete is clicked!");
                 return true;
         }
 
@@ -107,9 +119,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.show_notification:
 
-
+                showNotification("Notification Title", "Notification Message");
 
                 break;
+        }
+    }
+
+    private void showNotification(String title, String message) {
+        NotificationCompat.Builder notifBuilder = new NotificationCompat.Builder(this, MAIN_NOTIFICATION_CHANNEL_ID);
+        notifBuilder.setSmallIcon(R.mipmap.ic_launcher_round); // set the small icon of the notification
+        notifBuilder.setContentTitle(title); // set the title
+        notifBuilder.setContentText(message); // set the content text
+        notifBuilder.setVibrate(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+
+        // This is to make the notification a heads-up notification
+        notifBuilder.setDefaults(Notification.DEFAULT_ALL);
+        notifBuilder.setPriority(NotificationCompat.PRIORITY_HIGH);
+
+        // For Oreo and above
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel channel = new NotificationChannel(MAIN_NOTIFICATION_CHANNEL_ID, MAIN_NOTIFICATION_CHANNEL_NAME, importance);
+            channel.setDescription(MAIN_NOTIFICATION_DESCRIPTION);
+            channel.enableLights(true);
+            channel.setLightColor(Color.RED);
+            channel.enableVibration(true);
+            channel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+            channel.setShowBadge(false);
+
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+            notificationManager.notify(MAIN_NOTIFICATION_ID, notifBuilder.build());
+        } else {
+            // show the notification
+            NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            notificationManager.notify(MAIN_NOTIFICATION_ID, notifBuilder.build());
         }
     }
 }
