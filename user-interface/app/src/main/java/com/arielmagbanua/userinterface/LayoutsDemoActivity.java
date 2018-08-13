@@ -1,5 +1,6 @@
 package com.arielmagbanua.userinterface;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +36,10 @@ public class LayoutsDemoActivity extends AppCompatActivity implements View.OnCli
                 break;
 
             case R.id.list_view_demo_button:
+
+                Intent intent = new Intent(this, ListViewDemoActivity.class);
+                startActivity(intent);
+
                 break;
 
             case R.id.grid_view_demo_button:

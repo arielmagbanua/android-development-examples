@@ -1,5 +1,6 @@
 package com.arielmagbanua.userinterface;
 
+import android.app.Dialog;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void showToast(View view){
-        Toast.makeText(this, "Advance Thinker!!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Advance Thinker!!!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 builder.setCancelable(true);
                 builder.setTitle("Sample Dialog");
                 builder.setMessage("Are you an advance thinker?");
+                /*
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -106,6 +108,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         // Your logic here...
                     }
                 });
+                */
+
+                builder.setPositiveButton("Ok", dialogListener);
+                builder.setNegativeButton("Cancel", dialogListener);
+                builder.setNeutralButton("Neutral", dialogListener);
 
                 builder.show();
                 break;
@@ -124,6 +131,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+    private DialogInterface.OnClickListener dialogListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which){
+                case DialogInterface.BUTTON_POSITIVE:
+                    Toast.makeText(MainActivity.this, "Positive button clicked!", Toast.LENGTH_SHORT).show();
+                    break;
+                case DialogInterface.BUTTON_NEGATIVE:
+                    Toast.makeText(MainActivity.this, "Negative button clicked!", Toast.LENGTH_SHORT).show();
+                    break;
+                case DialogInterface.BUTTON_NEUTRAL:
+                    Toast.makeText(MainActivity.this, "Neutral button clicked!", Toast.LENGTH_SHORT).show();
+                    break;
+            }
+        }
+    };
 
     private void showNotification(String title, String message) {
         NotificationCompat.Builder notifBuilder = new NotificationCompat.Builder(this, MAIN_NOTIFICATION_CHANNEL_ID);
