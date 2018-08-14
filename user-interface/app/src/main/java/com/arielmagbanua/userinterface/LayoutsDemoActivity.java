@@ -30,9 +30,17 @@ public class LayoutsDemoActivity extends AppCompatActivity implements View.OnCli
 
         switch (id){
             case R.id.linear_layout_demo_button:
+
+                Intent linearLayoutDemoIntent = new Intent(this, LinearLayoutDemoActivity.class);
+                startActivity(linearLayoutDemoIntent);
+
                 break;
 
             case R.id.relative_layout_demo_button:
+
+                Intent relativeLayoutDemoIntent = new Intent(this, RelativeLayoutDemoActivity.class);
+                startActivity(relativeLayoutDemoIntent);
+
                 break;
 
             case R.id.list_view_demo_button:

@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 builder.setCancelable(true);
                 builder.setTitle("Sample Dialog");
                 builder.setMessage("Are you an advance thinker?");
+
                 /*
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
@@ -137,11 +138,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void onClick(DialogInterface dialog, int which) {
             switch (which){
                 case DialogInterface.BUTTON_POSITIVE:
+                    // execute code here..
                     Toast.makeText(MainActivity.this, "Positive button clicked!", Toast.LENGTH_SHORT).show();
                     break;
+
                 case DialogInterface.BUTTON_NEGATIVE:
                     Toast.makeText(MainActivity.this, "Negative button clicked!", Toast.LENGTH_SHORT).show();
                     break;
+
                 case DialogInterface.BUTTON_NEUTRAL:
                     Toast.makeText(MainActivity.this, "Neutral button clicked!", Toast.LENGTH_SHORT).show();
                     break;
@@ -162,8 +166,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // For Oreo and above
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            int importance = NotificationManager.IMPORTANCE_HIGH;
-            NotificationChannel channel = new NotificationChannel(MAIN_NOTIFICATION_CHANNEL_ID, MAIN_NOTIFICATION_CHANNEL_NAME, importance);
+            NotificationChannel channel = new NotificationChannel(
+                    MAIN_NOTIFICATION_CHANNEL_ID,
+                    MAIN_NOTIFICATION_CHANNEL_NAME,
+                    NotificationManager.IMPORTANCE_HIGH);
+
             channel.setDescription(MAIN_NOTIFICATION_DESCRIPTION);
             channel.enableLights(true);
             channel.setLightColor(Color.RED);
