@@ -45,12 +45,16 @@ public class LayoutsDemoActivity extends AppCompatActivity implements View.OnCli
 
             case R.id.list_view_demo_button:
 
-                Intent intent = new Intent(this, ListViewDemoActivity.class);
-                startActivity(intent);
+                Intent listViewDemoIntent = new Intent(this, ListViewDemoActivity.class);
+                startActivity(listViewDemoIntent);
 
                 break;
 
             case R.id.grid_view_demo_button:
+
+                Intent gridViewDemoIntent = new Intent(this, GridViewDemoActivity.class);
+                startActivity(gridViewDemoIntent);
+
                 break;
         }
     }

@@ -19,7 +19,8 @@
         <activity android:name=".LayoutsDemoActivity" />
         <activity android:name=".ListViewDemoActivity" />
         <activity android:name=".LinearLayoutDemoActivity" />
-        <activity android:name=".RelativeLayoutDemoActivity"></activity>
+        <activity android:name=".RelativeLayoutDemoActivity" />
+        <activity android:name=".GridViewDemoActivity"></activity>
     </application>
 
 </manifest>
