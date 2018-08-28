@@ -64,7 +64,9 @@ public class MemeAdapter extends ArrayAdapter<Meme> {
 
         if(meme.getImageFileName() != null){
             try {
-                memeImageView.setImageBitmap(getBitmapFromAssets(context, meme.getImageFileName()));
+                Bitmap bitmap = getBitmapFromAssets(context, meme.getImageFileName());
+
+                memeImageView.setImageBitmap(bitmap);
             } catch (IOException e) {
                 e.printStackTrace();
             }
