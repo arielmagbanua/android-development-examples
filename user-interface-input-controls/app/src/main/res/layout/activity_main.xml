@@ -18,4 +18,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Text Field Demo"/>
+
+    <Button
+        android:id="@+id/checkbox_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Checkbox Demo"/>
 </LinearLayout>

@@ -11,22 +11,26 @@
     android:orientation="horizontal">
 
     <Button
+        android:id="@+id/ordinary_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Alarm"/>
 
     <ImageButton
+        android:id="@+id/image_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_action_alarm"/>
 
     <Button
+        android:id="@+id/button_with_icon_at_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Alarm"
         android:drawableStart="@drawable/ic_action_alarm"/>
 
     <Button
+        android:id="@+id/button_with_icon_at_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Alarm"

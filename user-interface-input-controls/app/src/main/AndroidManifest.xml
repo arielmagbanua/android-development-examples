@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ButtonsDemoActivity" />
-        <activity android:name=".TextFieldDemoActivity"></activity>
+        <activity android:name=".TextFieldDemoActivity" />
+        <activity android:name=".CheckboxDemoActivity"></activity>
     </application>
 
 </manifest>

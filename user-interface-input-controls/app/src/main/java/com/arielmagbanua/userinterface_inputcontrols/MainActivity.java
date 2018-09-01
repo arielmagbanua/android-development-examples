@@ -15,9 +15,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button buttonsDemo = findViewById(R.id.buttons_demo);
         Button textFieldDemo = findViewById(R.id.text_field_demo);
+        Button checkboxDemo = findViewById(R.id.checkbox_demo);
 
         buttonsDemo.setOnClickListener(this);
         textFieldDemo.setOnClickListener(this);
+        checkboxDemo.setOnClickListener(this);
     }
 
     @Override
@@ -31,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.text_field_demo:
                 Intent textFieldDemoIntent = new Intent(this, TextFieldDemoActivity.class);
                 startActivity(textFieldDemoIntent);
+                break;
+
+            case R.id.checkbox_demo:
+                Intent checkboxDemo = new Intent(this, CheckboxDemoActivity.class);
+                startActivity(checkboxDemo);
                 break;
         }
     }
