@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CheckboxDemoActivity">
+    android:layout_height="match_parent">
 
 
     <TextView
@@ -21,7 +21,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
     <CheckBox
-        android:id="@+id/vanilla_checkBox"
+        android:id="@+id/vanilla_radioButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,34 +31,34 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <CheckBox
-        android:id="@+id/chocolate_checkBox"
+        android:id="@+id/chocolate_radioButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Chocolate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vanilla_checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/vanilla_radioButton" />
 
     <CheckBox
-        android:id="@+id/strawberry_checkbox"
+        android:id="@+id/strawberry_radioButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Strawberry"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chocolate_checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/chocolate_radioButton" />
 
     <CheckBox
-        android:id="@+id/double_dutch_checkbox"
+        android:id="@+id/double_dutch_radioButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Double Dutch"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/strawberry_checkbox" />
+        app:layout_constraintTop_toBottomOf="@+id/strawberry_radioButton" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/order_fab"

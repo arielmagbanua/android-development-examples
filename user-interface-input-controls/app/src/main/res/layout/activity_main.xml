@@ -24,4 +24,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Checkbox Demo"/>
+
+    <Button
+        android:id="@+id/radio_button_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Radio Button Demo"/>
+
+    <Button
+        android:id="@+id/toggle_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toggle Demo"/>
 </LinearLayout>

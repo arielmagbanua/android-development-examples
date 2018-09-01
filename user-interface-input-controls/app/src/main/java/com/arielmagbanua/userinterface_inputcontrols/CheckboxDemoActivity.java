@@ -24,10 +24,10 @@ public class CheckboxDemoActivity extends AppCompatActivity implements CompoundB
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkbox_demo);
 
-        vanillaCheckbox = findViewById(R.id.vanilla_checkBox);
-        chocolateCheckBox = findViewById(R.id.chocolate_checkBox);
-        strawberryCheckBox = findViewById(R.id.strawberry_checkbox);
-        doubleDutchCheckBox = findViewById(R.id.double_dutch_checkbox);
+        vanillaCheckbox = findViewById(R.id.vanilla_radioButton);
+        chocolateCheckBox = findViewById(R.id.chocolate_radioButton);
+        strawberryCheckBox = findViewById(R.id.strawberry_radioButton);
+        doubleDutchCheckBox = findViewById(R.id.double_dutch_radioButton);
 
         FloatingActionButton orderFab = findViewById(R.id.order_fab);
         orderFab.setOnClickListener(new View.OnClickListener() {
@@ -50,19 +50,19 @@ public class CheckboxDemoActivity extends AppCompatActivity implements CompoundB
         String message = "";
 
         switch (buttonView.getId()){
-            case R.id.vanilla_checkBox:
+            case R.id.vanilla_radioButton:
                 message = isChecked ? "Vanilla is chosen!" : "";
                 break;
 
-            case R.id.chocolate_checkBox:
+            case R.id.chocolate_radioButton:
                 message = isChecked ? "Chocolate is chosen!" : "";
                 break;
 
-            case R.id.strawberry_checkbox:
+            case R.id.strawberry_radioButton:
                 message = isChecked ? "Strawberry is chosen!" : "";
                 break;
 
-            case R.id.double_dutch_checkbox:
+            case R.id.double_dutch_radioButton:
                 message = isChecked ? "Double Dutch is chosen!" : "";
                 break;
         }
