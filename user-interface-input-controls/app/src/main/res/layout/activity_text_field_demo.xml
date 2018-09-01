@@ -76,6 +76,6 @@
         android:id="@+id/text_multiple_input_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textCapSentences|textCapWords"
+        android:inputType="textCapSentences|textCapWords|textMultiLine"
         android:hint="Multiline"/>
 </LinearLayout>

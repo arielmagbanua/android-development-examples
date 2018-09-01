@@ -9,13 +9,13 @@ import android.widget.Toast;
 
 public class ButtonsDemoActivity extends AppCompatActivity implements View.OnClickListener {
 
-//    private View.OnClickListener clickListener = new View.OnClickListener(){
-//
-//        @Override
-//        public void onClick(View v) {
-//            Toast.makeText(ButtonsDemoActivity.this, "Variable Listener", Toast.LENGTH_LONG).show();
-//        }
-//    };
+    private View.OnClickListener clickListener = new View.OnClickListener(){
+
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(ButtonsDemoActivity.this, "Variable Listener", Toast.LENGTH_LONG).show();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,18 +38,17 @@ public class ButtonsDemoActivity extends AppCompatActivity implements View.OnCli
 //            }
 //        });
 
-//        imageButton.setOnClickListener(clickListener);
-//        buttonWithIconAtLeft.setOnClickListener(clickListener);
-        ordinaryButton.setOnClickListener(this);
-        imageButton.setOnClickListener(this);
-        buttonWithIconAtLeft.setOnClickListener(this);
-        buttonWithIconAtRight.setOnClickListener(this);
+        imageButton.setOnClickListener(clickListener);
+        buttonWithIconAtLeft.setOnClickListener(clickListener);
+//        ordinaryButton.setOnClickListener(this);
+//        imageButton.setOnClickListener(this);
+//        buttonWithIconAtLeft.setOnClickListener(this);
+//        buttonWithIconAtRight.setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View v) {
-//        Toast.makeText(this, "Activity Listener", Toast.LENGTH_LONG).show();
         int id = v.getId();
 
         switch (id){

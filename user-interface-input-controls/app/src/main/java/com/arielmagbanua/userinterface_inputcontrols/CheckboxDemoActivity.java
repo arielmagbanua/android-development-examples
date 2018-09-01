@@ -24,10 +24,10 @@ public class CheckboxDemoActivity extends AppCompatActivity implements CompoundB
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkbox_demo);
 
-        vanillaCheckbox = findViewById(R.id.vanilla_radioButton);
-        chocolateCheckBox = findViewById(R.id.chocolate_radioButton);
-        strawberryCheckBox = findViewById(R.id.strawberry_radioButton);
-        doubleDutchCheckBox = findViewById(R.id.double_dutch_radioButton);
+        vanillaCheckbox = findViewById(R.id.vanilla_checkBox);
+        chocolateCheckBox = findViewById(R.id.chocolate_checkBox);
+        strawberryCheckBox = findViewById(R.id.strawberry_checkBox);
+        doubleDutchCheckBox = findViewById(R.id.double_dutch_checkBox);
 
         FloatingActionButton orderFab = findViewById(R.id.order_fab);
         orderFab.setOnClickListener(new View.OnClickListener() {
@@ -43,26 +43,30 @@ public class CheckboxDemoActivity extends AppCompatActivity implements CompoundB
         });
 
         vanillaCheckbox.setOnCheckedChangeListener(this);
+        chocolateCheckBox.setOnCheckedChangeListener(this);
+        strawberryCheckBox.setOnCheckedChangeListener(this);
+        doubleDutchCheckBox.setOnCheckedChangeListener(this);
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         String message = "";
+        int id = buttonView.getId();
 
-        switch (buttonView.getId()){
-            case R.id.vanilla_radioButton:
+        switch (id){
+            case R.id.vanilla_checkBox:
                 message = isChecked ? "Vanilla is chosen!" : "";
                 break;
 
-            case R.id.chocolate_radioButton:
+            case R.id.chocolate_checkBox:
                 message = isChecked ? "Chocolate is chosen!" : "";
                 break;
 
-            case R.id.strawberry_radioButton:
+            case R.id.strawberry_checkBox:
                 message = isChecked ? "Strawberry is chosen!" : "";
                 break;
 
-            case R.id.double_dutch_radioButton:
+            case R.id.double_dutch_checkBox:
                 message = isChecked ? "Double Dutch is chosen!" : "";
                 break;
         }
