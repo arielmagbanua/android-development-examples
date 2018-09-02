@@ -21,7 +21,8 @@
         <activity android:name=".CheckboxDemoActivity" />
         <activity android:name=".RadioButtonDemoActivity" />
         <activity android:name=".ToggleDemoActivity" />
-        <activity android:name=".SpinnerDemoActivity"></activity>
+        <activity android:name=".SpinnerDemoActivity" />
+        <activity android:name=".PickersDemoActivity"></activity>
     </application>
 
 </manifest>

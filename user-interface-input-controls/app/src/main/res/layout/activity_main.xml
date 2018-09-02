@@ -44,7 +44,7 @@
         android:text="Spinner Demo"/>
 
     <Button
-        android:id="@+id/picker_demo"
+        android:id="@+id/pickers_demo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Picker Demo"/>
