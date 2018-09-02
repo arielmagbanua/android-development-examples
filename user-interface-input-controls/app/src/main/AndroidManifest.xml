@@ -19,7 +19,8 @@
         <activity android:name=".ButtonsDemoActivity" />
         <activity android:name=".TextFieldDemoActivity" />
         <activity android:name=".CheckboxDemoActivity" />
-        <activity android:name=".RadioButtonDemoActivity"></activity>
+        <activity android:name=".RadioButtonDemoActivity" />
+        <activity android:name=".ToggleDemoActivity"></activity>
     </application>
 
 </manifest>

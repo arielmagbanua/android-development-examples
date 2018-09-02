@@ -24,6 +24,8 @@ public class CheckboxDemoActivity extends AppCompatActivity implements CompoundB
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkbox_demo);
 
+        getSupportActionBar().setTitle("CheckBox Demo");
+
         vanillaCheckbox = findViewById(R.id.vanilla_checkBox);
         chocolateCheckBox = findViewById(R.id.chocolate_checkBox);
         strawberryCheckBox = findViewById(R.id.strawberry_checkBox);

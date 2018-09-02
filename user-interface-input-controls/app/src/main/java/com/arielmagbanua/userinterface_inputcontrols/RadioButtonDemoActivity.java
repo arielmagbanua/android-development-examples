@@ -12,6 +12,8 @@ public class RadioButtonDemoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_radio_button_demo);
 
+        getSupportActionBar().setTitle("Radio Buttons Demo");
+
         RadioGroup flavorGroup = findViewById(R.id.flavor_group);
         flavorGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

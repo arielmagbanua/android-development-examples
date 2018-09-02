@@ -17,11 +17,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button textFieldDemo = findViewById(R.id.text_field_demo);
         Button checkboxDemo = findViewById(R.id.checkbox_demo);
         Button radioButtonDemo = findViewById(R.id.radio_button_demo);
+        Button toggleDemo = findViewById(R.id.toggle_demo);
 
         buttonsDemo.setOnClickListener(this);
         textFieldDemo.setOnClickListener(this);
         checkboxDemo.setOnClickListener(this);
         radioButtonDemo.setOnClickListener(this);
+        toggleDemo.setOnClickListener(this);
     }
 
     @Override
@@ -43,8 +45,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.radio_button_demo:
-                Intent radioButtonDemo = new Intent(this, RadioButtonDemoActivity.class);
-                startActivity(radioButtonDemo);
+                Intent radioButtonDemoIntent = new Intent(this, RadioButtonDemoActivity.class);
+                startActivity(radioButtonDemoIntent);
+                break;
+
+            case R.id.toggle_demo:
+                Intent toggleDemoIntent = new Intent(this, ToggleDemoActivity.class);
+                startActivity(toggleDemoIntent);
+                break;
+
+            case R.id.spinner_demo:
+                break;
+
+            case R.id.picker_demo:
                 break;
         }
     }

@@ -9,5 +9,7 @@ public class TextFieldDemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_field_demo);
+
+        getSupportActionBar().setTitle("Text Field Demo");
     }
 }
