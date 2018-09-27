@@ -42,7 +42,7 @@ public class ToggleDemoActivity extends AppCompatActivity implements CompoundBut
 
             case R.id.toggle_switch:
                 toggleSwitchValue = isChecked;
-                messsage = isChecked ? "Toggle Switch is on" : "Toggle Button is off";
+                messsage = isChecked ? "Switch is on" : "Switch is off";
                 break;
         }
 

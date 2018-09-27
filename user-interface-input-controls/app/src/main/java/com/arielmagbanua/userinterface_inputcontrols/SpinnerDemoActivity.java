@@ -2,14 +2,18 @@ package com.arielmagbanua.userinterface_inputcontrols;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class SpinnerDemoActivity extends AppCompatActivity {
+public class SpinnerDemoActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private String[] students = {
             "Clyde",
@@ -41,5 +45,21 @@ public class SpinnerDemoActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         studentsSpinner.setAdapter(adapter);
+
+        studentsSpinner.setOnItemSelectedListener(this);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        TextView studentNameTextView = view.findViewById(R.id.name_textView);
+        String message = studentNameTextView.getText().toString() + " position: "+position;
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+
+        // your codes here
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+        // Toast.makeText(this, "Nothing selected!", Toast.LENGTH_LONG).show();
     }
 }

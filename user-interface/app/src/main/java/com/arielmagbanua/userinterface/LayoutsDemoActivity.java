@@ -17,11 +17,13 @@ public class LayoutsDemoActivity extends AppCompatActivity implements View.OnCli
         Button relativeLayoutDemoButton = findViewById(R.id.relative_layout_demo_button);
         Button listViewDemoButton = findViewById(R.id.list_view_demo_button);
         Button gridViewDemoButton = findViewById(R.id.grid_view_demo_button);
+        Button constraintLayoutDemoButton = findViewById(R.id.constraint_layout_demo_button);
 
         linearLayoutDemoButton.setOnClickListener(this);
         relativeLayoutDemoButton.setOnClickListener(this);
         listViewDemoButton.setOnClickListener(this);
         gridViewDemoButton.setOnClickListener(this);
+        constraintLayoutDemoButton.setOnClickListener(this);
     }
 
     @Override
@@ -56,6 +58,14 @@ public class LayoutsDemoActivity extends AppCompatActivity implements View.OnCli
                 startActivity(gridViewDemoIntent);
 
                 break;
+
+            case R.id.constraint_layout_demo_button:
+
+                Intent constraintLayoutDemoIntent = new Intent(this, ConstraintLayoutDemoActivity.class);
+                startActivity(constraintLayoutDemoIntent);
+
+                break;
+
         }
     }
 }

@@ -50,11 +50,11 @@ public class StudentsSpinnerAdapter extends ArrayAdapter<String> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         String studentName = getItem(position);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View memeItemLayout = inflater.inflate(itemLayoutResource, parent, false);
+        View studentItemLayout = inflater.inflate(itemLayoutResource, parent, false);
 
-        TextView studentNameTextView = memeItemLayout.findViewById(R.id.name_textView);
+        TextView studentNameTextView = studentItemLayout.findViewById(R.id.name_textView);
         studentNameTextView.setText(studentName);
 
-        return memeItemLayout;
+        return studentItemLayout;
     }
 }

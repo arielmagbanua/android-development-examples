@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +21,9 @@
         <activity android:name=".ListViewDemoActivity" />
         <activity android:name=".LinearLayoutDemoActivity" />
         <activity android:name=".RelativeLayoutDemoActivity" />
-        <activity android:name=".GridViewDemoActivity"></activity>
+        <activity android:name=".GridViewDemoActivity" />
+        <activity android:name=".ConstraintLayoutDemoActivity"/>
+
     </application>
 
 </manifest>
