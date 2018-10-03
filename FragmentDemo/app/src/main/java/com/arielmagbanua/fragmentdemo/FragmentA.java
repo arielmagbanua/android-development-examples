@@ -23,4 +23,25 @@ public class FragmentA extends Fragment {
 
         Log.d("FRAGMENT_TAG", "Fragment A onResume()");
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        Log.d("FRAGMENT_TAG", "Fragment A onPause()");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        Log.d("FRAGMENT_TAG", "Fragment A onStop()");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+
+        Log.d("FRAGMENT_TAG", "Fragment A onStop()");
+    }
 }

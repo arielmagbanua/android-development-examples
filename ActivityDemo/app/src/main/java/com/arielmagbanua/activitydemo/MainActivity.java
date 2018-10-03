@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        // do code here
         Log.d(TAG, "onStart()");
     }
 
@@ -83,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onRestart()");
     }
 
-    /*
     @Override
     public void onSaveInstanceState(Bundle outState) {
         outState.putDouble(NUMBER_KEY, number);
@@ -98,5 +96,4 @@ public class MainActivity extends AppCompatActivity {
         number = savedInstanceState.getDouble(NUMBER_KEY);
         Log.d(TAG, "original: "+number);
     }
-    */
 }

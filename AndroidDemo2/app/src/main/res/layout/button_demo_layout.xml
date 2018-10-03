@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/ordinary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm"/>
+
+    <ImageButton
+        android:id="@+id/image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_alarm"/>
+
+    <Button
+        android:id="@+id/button_with_icon_at_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm"
+        android:drawableStart="@drawable/ic_action_alarm"/>
+
+    <Button
+        android:id="@+id/button_with_icon_at_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm"
+        android:drawableEnd="@drawable/ic_action_alarm"/>
+</LinearLayout>
