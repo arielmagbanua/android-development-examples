@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 public class ButtonsDemoActivity extends AppCompatActivity implements View.OnClickListener {
 
+    // Interface variable | Option 1
     private View.OnClickListener clickListener = new View.OnClickListener(){
 
         @Override
@@ -30,22 +31,38 @@ public class ButtonsDemoActivity extends AppCompatActivity implements View.OnCli
         Button buttonWithIconAtLeft = findViewById(R.id.button_with_icon_at_left);
         Button buttonWithIconAtRight = findViewById(R.id.button_with_icon_at_right);
 
-//        ordinaryButton.setOnClickListener(new View.OnClickListener(){
-//
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(ButtonsDemoActivity.this, "Ordinary button is clicked", Toast.LENGTH_LONG).show();
-//            }
-//        });
+        // Anonymous Inner Class | Option 3
+        ordinaryButton.setOnClickListener(new View.OnClickListener(){
 
-        imageButton.setOnClickListener(clickListener);
-        buttonWithIconAtLeft.setOnClickListener(clickListener);
-//        ordinaryButton.setOnClickListener(this);
-//        imageButton.setOnClickListener(this);
-//        buttonWithIconAtLeft.setOnClickListener(this);
-//        buttonWithIconAtRight.setOnClickListener(this);
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ButtonsDemoActivity.this, "Ordinary button is clicked", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        // Registering event listener through interface variable | Option 1
+//        imageButton.setOnClickListener(clickListener);
+//        buttonWithIconAtLeft.setOnClickListener(clickListener);
+
+        // Using named class | Option 2
+        ButtonsDemoActivity.ActivityClickHandler clickHandler = new ButtonsDemoActivity.ActivityClickHandler();
+        imageButton.setOnClickListener(clickHandler);
+        buttonWithIconAtLeft.setOnClickListener(clickHandler);
+
+        // Using the Activity class that implements the Listener interface | Option 4
+        buttonWithIconAtLeft.setOnClickListener(this);
+        buttonWithIconAtRight.setOnClickListener(this);
     }
 
+
+    // Using named class | Option 2
+    public static class ActivityClickHandler implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            // do something here
+        }
+    }
 
     @Override
     public void onClick(View v) {
