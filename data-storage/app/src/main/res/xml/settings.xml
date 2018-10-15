@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="@string/allow_notification_key"
+        android:summary="Allow Receiving of Notification"
+        android:title="Allow Notification"
+        android:defaultValue="true"/>
+
+    <CheckBoxPreference
+        android:key="@string/allow_mobile_data_key"
+        android:summary="Allow Mobile Data Usage"
+        android:title="Allow Mobile Data"
+        android:defaultValue="false"/>
+
+    <CheckBoxPreference
+        android:key="@string/allow_screen_rotation_key"
+        android:summary="Allow Screen Rotation"
+        android:title="Allow Screen Rotation"
+        android:defaultValue="false"/>
+
+    <EditTextPreference
+        android:key="@string/number_items_key"
+        android:summary="Number of items to display"
+        android:title="Number of Items to Display"
+        android:defaultValue="15"/>
+
+    <ListPreference
+        android:key="@string/data_refresh_key"
+        android:summary="Data refresh frequency"
+        android:title="Data Refresh"
+        android:entries="@array/data_refresh_display"
+        android:entryValues="@array/data_refresh_value"
+        android:defaultValue="1"/>
+
+</PreferenceScreen>

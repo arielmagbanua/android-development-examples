@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Data Storage Demo</string>
+    <string name="allow_notification_key">allow_notification_key</string>
+    <string name="allow_mobile_data_key">allow_mobile_data_key</string>
+    <string name="allow_screen_rotation_key">allow_screen_rotation_key</string>
+    <string name="number_items_key">number_items_key</string>
+    <string name="data_refresh_key">data_referesh_key</string>
 </resources>
