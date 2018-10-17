@@ -32,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
         String numberOfItems = sharedPreferences.getString(numberOfItemsKey, "0");
         int number = Integer.parseInt(numberOfItems);
 
+        String dataRefreshKey = getResources().getString(R.string.data_refresh_key);
+        String dataRefresh = sharedPreferences.getString(dataRefreshKey, "0");
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(allowNotificationKey, false);
+        editor.commit();
+
         Log.d("test", "test");
     }
 
