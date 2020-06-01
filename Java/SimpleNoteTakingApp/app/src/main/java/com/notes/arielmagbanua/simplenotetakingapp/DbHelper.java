@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -24,7 +22,6 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String COL_UPDATED_AT = "updated_at";
 
     public DbHelper(Context context) {
-
         super(context, DB_NAME, null, DB_VERSION);
     }
 
@@ -43,9 +40,7 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-    }
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) { }
 
     // inserting a note
     public long insertNote(SQLiteDatabase db, String title, String body){
