@@ -1,11 +1,11 @@
 package com.arielmagbanua.userinterface_inputcontrols;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SwitchCompat;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 public class ToggleDemoActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 

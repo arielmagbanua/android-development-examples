@@ -35,4 +35,5 @@
         android:layout_height="wrap_content"
         android:text="Alarm"
         android:drawableEnd="@drawable/ic_action_alarm"/>
+
 </LinearLayout>

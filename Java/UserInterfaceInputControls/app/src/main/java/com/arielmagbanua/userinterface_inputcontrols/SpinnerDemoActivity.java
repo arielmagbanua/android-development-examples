@@ -1,17 +1,14 @@
 package com.arielmagbanua.userinterface_inputcontrols;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SpinnerDemoActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
