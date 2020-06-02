@@ -19,4 +19,5 @@
         android:layout_below="@+id/meme_imageView"
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
 </RelativeLayout>

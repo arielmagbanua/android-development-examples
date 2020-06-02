@@ -18,4 +18,5 @@
         android:layout_below="@+id/text_view_1"
         android:layout_toEndOf="@+id/text_view_1"
         android:text="TextView 2"/>
+
 </RelativeLayout>

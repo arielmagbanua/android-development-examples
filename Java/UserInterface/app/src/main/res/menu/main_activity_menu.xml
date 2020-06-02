@@ -14,4 +14,5 @@
         android:id="@+id/menu_settings"
         android:icon="@drawable/ic_action_settings"
         app:showAsAction="ifRoom"/>
+
 </menu>
